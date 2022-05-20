@@ -5,10 +5,11 @@ jobs:
   check:
     runs-on: ubuntu-latest
     environment: pr
-      AK: ${{ secrets.ACCESS_KEY_ID }}
-      COMPARE: ${{ secrets.TEST }}
     steps:
       - name: Compare
+        env:
+          AK: ${{ secrets.ACCESS_KEY_ID }}
+          COMPARE: ${{ secrets.TEST }}
         run: |
           if [[ $AK == $COMPARE ]]; then
               echo "Rotate These Keys"
