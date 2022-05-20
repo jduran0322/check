@@ -8,7 +8,7 @@ jobs:
     steps:
       - name: Compare
         env:
-          AK: ${{ secrets.ACCESS_KEY_ID }}
+          AK: ${{ secrets.AWS_ACCESS_KEY_ID }}
           COMPARE: ${{ secrets.TEST }}
         run: |
           if [[ $AK == $COMPARE ]]; then
