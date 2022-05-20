@@ -4,7 +4,7 @@ on:
 jobs:
   check:
     runs-on: ubuntu-latest
-    environment: pr
+    environment: test
     steps:
       - name: Compare
         env:
